@@ -155,7 +155,7 @@ die() {
 fetch() {
     if [ ! -e "$MUSL_CC_BASE/tarballs/$2" ]
     then
-        wget -O "$MUSL_CC_BASE/tarballs/$2.part" -c "$1""$2"
+        wget --no-check-certificate -O "$MUSL_CC_BASE/tarballs/$2.part" -c "$1""$2"
         mv "$MUSL_CC_BASE/tarballs/$2.part" "$MUSL_CC_BASE/tarballs/$2"
     fi
     return 0
